@@ -10,7 +10,8 @@ pipeline {
       }
     }
     stage('awx') {
-      ansibleTower(
+      steps {
+        ansibleTower(
             towerServer: 'AWX',  // set server on AWX tower
             towerCredentialsId: 'AWX',     // User and password
             templateType: 'job',        // template type
@@ -20,6 +21,7 @@ pipeline {
 //             extraVars: '''---
 // my_var:  "Jenkins Test"''',
         )
+      }
     }
   }
-} 
+}
