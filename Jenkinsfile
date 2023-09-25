@@ -1,4 +1,4 @@
-properties([parameters([choice(choices: ['Promote Vault HA', 'Synchronize Vault HA DRP', 'testjenkins'], name: 'template')])])
+properties([parameters([choice(choices: ['testjenkins', 'cicdfew',], name: 'template')])])
 
 
 pipeline {
@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('101') {
       steps {
-        echo "Pran"
+        echo "Few"
         echo "$template"
       }
     }
